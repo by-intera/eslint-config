@@ -1,6 +1,6 @@
 {
-  "name": "@intera/eslint-config",
-  "version": "0.1.0",
+  "name": "@byintera/eslint-config",
+  "version": "0.0.1",
   "description": "Shared ESLint config",
   "author": "Intera <tech@byintera.com>",
   "repository": {
@@ -12,6 +12,9 @@
   },
   "homepage": "https://github.com/by-intera/eslint-config",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -37,5 +40,9 @@
     "eslint-plugin-sort-destructure-keys": "^1.3.5",
     "eslint-plugin-testing-library": "^3.10.1",
     "prettier": "^2.2.1"
-  }
+  },
+  "devDependencies": {
+    "@byintera/prettier-config": "^0.1.0"
+  },
+  "prettier": "@byintera/prettier-config"
 }

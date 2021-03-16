@@ -1,4 +1,6 @@
-# @intera/eslint-config
+# @byintera/eslint-config
+
+[![npm version](https://badge.fury.io/js/%40byintera%2Feslint-config.svg)](https://badge.fury.io/js/%40byintera%2Feslint-config)
 
 Intera's shared [ESLint](https://eslint.org/) configuration.
 
@@ -6,7 +8,7 @@ Intera's shared [ESLint](https://eslint.org/) configuration.
 
 1. Install the package.
 ```sh
-$ npm install -D @intera/eslint-config
+$ npm install -D @byintera/eslint-config
 ```
 
 2. Add `"extends": "airbnb"` to your .eslintrc

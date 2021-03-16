@@ -3,10 +3,11 @@ module.exports = {
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
+    'plugin:jest/recommended',
     'plugin:prettier/recommended',
-    'prettier',
+    'plugin:testing-library/recommended',
   ],
-  plugins: ['simple-import-sort', 'sort-destructure-keys'],
+  plugins: ['react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
