@@ -11,7 +11,7 @@ Intera's shared [ESLint](https://eslint.org/) configuration.
 $ npm install -D @byintera/eslint-config
 ```
 
-2. Add `"extends": "airbnb"` to your .eslintrc
+2. Add `"extends": ["@byintera/eslint-config"]` to your .eslintrc
 
 [Read more on shared configurations.](https://eslint.org/docs/user-guide/configuring/#extending-configuration-files)
 
