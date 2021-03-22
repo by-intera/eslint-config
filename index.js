@@ -27,7 +27,11 @@ module.exports = {
         project: './tsconfig.json',
         tsconfigRootDir: './',
       },
-      extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
+      extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:typescript-sort-keys/recommended',
+      ],
       rules: {
         // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
         'default-case': 'off',
