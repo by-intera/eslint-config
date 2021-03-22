@@ -5,15 +5,32 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:testing-library/recommended',
   ],
+  env: {
+    commonjs: true,
+    es6: true,
+    jest: true,
+    node: true,
+  },
   plugins: ['react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jxs', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', './'],
+      },
+    },
+  },
   overrides: [
     {
       files: ['**/*.js?(x)'],
       parser: 'babel-eslint',
+      rules: {
+        'react/prop-types': 'warn',
+      },
     },
     {
       files: ['**/*.ts?(x)'],
@@ -63,20 +80,43 @@ module.exports = {
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
         'react/default-props-match-prop-types': 'off',
-        'react/jsx-filename-extension': 'off',
         'react/prop-types': 'off',
+        'react/require-default-props': 'off',
       },
     },
   ],
   rules: {
+    'global-require': 'off',
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+    'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
+    'no-plusplus': 'off',
+    'padding-line-between-statements': [
+      'warn',
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'always', prev: '*', next: 'return' },
+    ],
     'import/extensions': [
       'warn',
       'never',
       {
         json: 'always',
+        css: 'always',
+        scss: 'always',
       },
     ],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/prefer-default-export': 'warn',
+    'jsx-a11y/control-has-associated-label': 'warn',
     'react-hooks/rules-of-hooks': 'error',
+    'react/jsx-filename-extension': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'warn',
+    'react/prefer-stateless-function': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/sort-prop-types': 'warn',
     'react-hooks/exhaustive-deps': [
       'warn',
       {
