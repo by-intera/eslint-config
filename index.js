@@ -89,6 +89,7 @@ module.exports = {
     'global-require': 'off',
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
+    'no-else-return': ['error', { allowElseIf: true }],
     'no-plusplus': 'off',
     'padding-line-between-statements': [
       'warn',
@@ -96,6 +97,7 @@ module.exports = {
       { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
       { blankLine: 'always', prev: 'block-like', next: '*' },
       { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'never', prev: 'case', next: 'block-like' },
       { blankLine: 'always', prev: '*', next: 'return' },
     ],
     'import/extensions': [
@@ -107,16 +109,17 @@ module.exports = {
         scss: 'always',
       },
     ],
+    'import/no-cycle': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'warn',
     'jsx-a11y/control-has-associated-label': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-sort-props': ['warn', { reservedFirst: true }],
     'react/no-array-index-key': 'warn',
     'react/prefer-stateless-function': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/sort-prop-types': 'warn',
     'react-hooks/exhaustive-deps': [
       'warn',
       {
