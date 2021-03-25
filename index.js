@@ -41,8 +41,6 @@ module.exports = {
         ecmaFeatures: {
           jsx: true,
         },
-        project: './tsconfig.json',
-        tsconfigRootDir: './',
       },
       extends: [
         'plugin:import/typescript',
