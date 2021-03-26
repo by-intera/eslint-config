@@ -84,6 +84,7 @@ module.exports = {
     },
   ],
   rules: {
+    curly: ['error', 'all'],
     'global-require': 'off',
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
@@ -112,6 +113,7 @@ module.exports = {
     'import/prefer-default-export': 'warn',
     'jsx-a11y/control-has-associated-label': 'warn',
     'react-hooks/rules-of-hooks': 'error',
+    'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-sort-props': ['warn', { reservedFirst: true }],
