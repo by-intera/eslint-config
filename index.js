@@ -3,7 +3,8 @@ module.exports = {
     'airbnb',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/dom',
+    'plugin:testing-library/react',
   ],
   env: {
     commonjs: true,
@@ -13,7 +14,7 @@ module.exports = {
   },
   plugins: ['react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   settings: {
@@ -89,6 +90,25 @@ module.exports = {
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
     'no-else-return': ['error', { allowElseIf: true }],
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: [
+          'acc', // for reduce accumulators
+          'accumulator', // for reduce accumulators
+          'e', // for e.returnvalue
+          'event', // for AWS Lambdas
+          'ctx', // for Koa routing
+          'context', // for Koa routing
+          'draft', // for immer
+          'req', // for Express requests
+          'request', // for Express requests
+          'res', // for Express responses
+          'response', // for Express responses
+        ],
+      },
+    ],
     'no-plusplus': 'off',
     'padding-line-between-statements': [
       'warn',
@@ -133,7 +153,7 @@ module.exports = {
           ['^\\u0000'], // Side effect imports
           ['^react$', '^react-dom$', '^react', '^@?\\w'],
           ['^src/modules'],
-          ['^src/config', '^src/literals'],
+          ['^src'],
           ['^src/components', '^src/containers', '^src/routes'],
           ['^src/types'],
           ['^test'],
