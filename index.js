@@ -3,8 +3,7 @@ module.exports = {
     'airbnb',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
-    'plugin:testing-library/dom',
-    'plugin:testing-library/react',
+    'plugin:testing-library/recommended',
   ],
   env: {
     commonjs: true,
