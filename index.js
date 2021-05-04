@@ -96,8 +96,10 @@ module.exports = {
         ignorePropertyModificationsFor: [
           'acc', // for reduce accumulators
           'accumulator', // for reduce accumulators
-          'e', // for e.returnvalue
-          'event', // for AWS Lambdas
+          'e', // for events
+          'event', // for events / AWS Lambdas
+          'el', // for HTMLElements
+          'element', // for HTMLElements
           'ctx', // for Koa routing
           'context', // for Koa routing
           'draft', // for immer
