@@ -1,6 +1,6 @@
 {
   "name": "@byintera/eslint-config",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Shared ESLint config",
   "author": "Intera <tech@byintera.com>",
   "repository": {
