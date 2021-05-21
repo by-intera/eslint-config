@@ -111,6 +111,7 @@ module.exports = {
       },
     ],
     'no-plusplus': 'off',
+    'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
     'padding-line-between-statements': [
       'warn',
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
