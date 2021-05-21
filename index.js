@@ -2,8 +2,10 @@ module.exports = {
   extends: [
     'airbnb',
     'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/react',
   ],
   env: {
     commonjs: true,
@@ -11,7 +13,7 @@ module.exports = {
     jest: true,
     node: true,
   },
-  plugins: ['react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
+  plugins: ['@babel', 'react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
@@ -27,7 +29,10 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.js?(x)'],
-      parser: 'babel-eslint',
+      parser: '@babel/eslint-parser',
+      parserOptions: {
+        requireConfigFile: false,
+      },
       rules: {
         'react/prop-types': 'warn',
       },
@@ -134,7 +139,6 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'warn',
     'jsx-a11y/control-has-associated-label': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
     'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -148,6 +152,7 @@ module.exports = {
         additionalHooks: 'useUpdateEffect',
       },
     ],
+    'react-hooks/rules-of-hooks': 'error',
     'simple-import-sort/imports': [
       'error',
       {
