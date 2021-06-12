@@ -137,7 +137,7 @@ module.exports = {
     ],
     'import/no-cycle': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/prefer-default-export': 'warn',
+    'import/prefer-default-export': 'off',
     'jsx-a11y/control-has-associated-label': 'warn',
     'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
     'react/jsx-filename-extension': 'off',
