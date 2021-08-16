@@ -160,9 +160,9 @@ module.exports = {
         groups: [
           ['^\\u0000'], // Side effect imports
           ['^react$', '^react-dom$', '^react', '^@?\\w'],
-          ['^src/modules'],
+          ['^(src/)?modules'],
           ['^src'],
-          ['^src/components', '^src/containers', '^src/routes'],
+          ['^(src/)components', '^(src/)containers', '^(src/)routes'],
           ['^src/types'],
           ['^test'],
           ['^\\./[^.]'], // './*'
