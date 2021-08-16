@@ -24,6 +24,7 @@ module.exports = {
         extensions: ['.js', '.jxs', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', './'],
       },
+      typescript: {},
     },
   },
   overrides: [
