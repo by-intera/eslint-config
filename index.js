@@ -138,8 +138,10 @@ module.exports = {
     ],
     'import/no-cycle': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-named-as-default': 'off',
     'import/prefer-default-export': 'off',
     'jsx-a11y/control-has-associated-label': 'warn',
+    'jsx-a11y/label-has-associated-control': 'warn',
     'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -147,6 +149,7 @@ module.exports = {
     'react/no-array-index-key': 'warn',
     'react/prefer-stateless-function': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/no-unescaped-entities': 'off',
     'react-hooks/exhaustive-deps': [
       'warn',
       {
@@ -161,8 +164,19 @@ module.exports = {
           ['^\\u0000'], // Side effect imports
           ['^react$', '^react-dom$', '^react', '^@?\\w'],
           ['^(src/)?modules'],
-          ['^src'],
-          ['^(src/)components', '^(src/)containers', '^(src/)routes'],
+          [
+            '^(src/)?actions',
+            '^(src/)?literals',
+            '^(src/)?reducers',
+            '^(src/)?sagas',
+            '^(src/)?store$',
+          ],
+          ['^(src/)?config$'],
+          ['^(src/)?types'],
+          ['^Root'],
+          ['^(src/)?components'],
+          ['^(src/)?containers'],
+          ['^(src/)?routes'],
           ['^src/types'],
           ['^test'],
           ['^\\./[^.]'], // './*'
