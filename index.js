@@ -17,6 +17,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   settings: {
     'import/resolver': {
@@ -33,6 +36,9 @@ module.exports = {
       parser: '@babel/eslint-parser',
       parserOptions: {
         requireConfigFile: false,
+        babelOptions: {
+          presets: ['@babel/preset-react'],
+        },
       },
       rules: {
         'react/prop-types': 'warn',
@@ -41,13 +47,6 @@ module.exports = {
     {
       files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
