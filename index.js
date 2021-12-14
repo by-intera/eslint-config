@@ -126,6 +126,7 @@ module.exports = {
       { blankLine: 'never', prev: 'case', next: 'block-like' },
       { blankLine: 'always', prev: '*', next: 'return' },
     ],
+    'prefer-regex-literals': 'off',
     'import/extensions': [
       'warn',
       'never',
@@ -137,6 +138,7 @@ module.exports = {
     ],
     'import/no-cycle': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-import-module-exports': 'off',
     'import/no-named-as-default': 'off',
     'import/prefer-default-export': 'off',
     'jsx-a11y/control-has-associated-label': 'warn',
