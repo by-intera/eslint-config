@@ -8,7 +8,7 @@ Intera's shared [ESLint](https://eslint.org/) configuration.
 
 1. Install the package.
 ```sh
-$ npm install -D @byintera/eslint-config
+$ npm install -D @by-intera/eslint-config
 ```
 
 2. Add `"extends": ["@byintera/eslint-config"]` to your .eslintrc
