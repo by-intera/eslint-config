@@ -4,14 +4,24 @@
 
 Intera's shared [ESLint](https://eslint.org/) configuration.
 
+## Versions
+
+Draw table with 2 columns: Version, Changes
+
+| Version | Description    |
+| ------- | -------------- |
+| 1.x     | Typescript 4.x |
+| 2.x     | Typescript 5.x |
+
 ## Setup
 
 1. Install the package.
+
 ```sh
 $ npm install -D @by-intera/eslint-config
 ```
 
-2. Add `"extends": ["@byintera/eslint-config"]` to your .eslintrc
+2. Add `"extends": ["@by-intera/eslint-config"]` to your .eslintrc
 
 [Read more on shared configurations.](https://eslint.org/docs/user-guide/configuring/#extending-configuration-files)
 
