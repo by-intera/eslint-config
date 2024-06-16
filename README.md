@@ -6,8 +6,6 @@ Intera's shared [ESLint](https://eslint.org/) configuration.
 
 ## Versions
 
-Draw table with 2 columns: Version, Changes
-
 | Version | Description    |
 | ------- | -------------- |
 | 1.x     | Typescript 4.x |
