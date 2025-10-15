@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: ['@babel', 'react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 2024,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -24,7 +24,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jxs', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', './', './src'],
       },
       typescript: {},
