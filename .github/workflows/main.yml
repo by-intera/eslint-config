@@ -22,30 +22,22 @@ jobs:
       GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
     steps:
-      - name: Setup repo
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      - name: Setup Node 22 + NPM cache
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
-
-      - name: Cache Packages
-        id: cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-        timeout-minutes: 1
+          node-version: '22.x'
+          cache: 'npm'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@by-intera'
 
       - name: Install Packages
         run: |
           npm config set //npm.pkg.github.com/:_authToken=$GH_PACKAGES_TOKEN
           npm config set @by-intera:registry=https://npm.pkg.github.com
           npm ci
-        timeout-minutes: 3
 
       - name: Publish Package
         if: startsWith(github.ref, 'refs/tags/')
