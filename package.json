@@ -1,6 +1,6 @@
 {
   "name": "@by-intera/eslint-config",
-  "version": "2.0.1",
+  "version": "3.0.0-beta.0",
   "description": "Shared ESLint config",
   "author": "Intera <tech@byintera.com>",
   "repository": {
@@ -32,7 +32,11 @@
     "jest": "^29.0.0",
     "typescript": "^5.9.0"
   },
-  "peerDependenciesMeta": { "jest": { "optional": true } },
+  "peerDependenciesMeta": {
+    "jest": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@babel/core": "^7.25.0",
     "@babel/eslint-parser": "^7.25.0",
