@@ -1,4 +1,4 @@
-# @byintera/eslint-config
+# @by-intera/eslint-config
 
 [![npm version](https://badge.fury.io/js/%40byintera%2Feslint-config.svg)](https://badge.fury.io/js/%40byintera%2Feslint-config)
 
@@ -7,9 +7,10 @@ Intera's shared [ESLint](https://eslint.org/) configuration.
 ## Versions
 
 | Version | Description    |
-| ------- | -------------- |
+|---------|----------------|
 | 1.x     | Typescript 4.x |
 | 2.x     | Typescript 5.x |
+| 3.x     | Node 22.x      |
 
 ## Setup
 
